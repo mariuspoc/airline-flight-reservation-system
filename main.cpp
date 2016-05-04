@@ -36,7 +36,7 @@ STRICT:
 NON-STRICT, but you should follow anyway:
 *Seat indexes shouldn't be negative
 *Seat range should not include 0, as picking this seat will exit the program
-*There shouldn't be a gap between first class and second class as you will be able to reserve "gap" seats, however they will not be dissplayed in the reservation menu. (there is an index in the array for it, but the seat "isn't there")
+*There shouldn't be a gap between first class and second class as you will be able to reserve "gap" seats, however they will not be displayed in the reservation menu. (there is an index in the array for it, but the seat "isn't there")
 */
 
 void printStatusOfSeats(int flightClass)    // Function to print the available seats in the selected class.
