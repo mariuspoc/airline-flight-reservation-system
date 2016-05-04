@@ -12,7 +12,6 @@ using namespace std;
 int flightClass;                            // First/second
 int seatPick;                               // Which seat you pick (1-10). Also used to exit loops (when value is 0, certain loops are broken)
 int switchClass;                            // Variable used to switch classes
-//int reserveAnother=1;                     // Integer which changes according to client's need to reserve another seat (1=reserve one more, 0=stop reserving)
 const int firstClassSeats[2]={1,5};         // Settings for the seats of the First class (first number - "from" seat, second - "to" seat). These numbers are INCLUSIVE
 const int secondClassSeats[2]={6,10};       // Settings for the seats of the Economy class (first number - "from" seat, second - "to" seat). These numbers are INCLUSIVE
 /*  It is assumed that:
@@ -33,9 +32,9 @@ STRICT:
 *Seat numbers of first class must be smaller than of the second class (Ignoring this will cause seats to become invalid)
 *Seat ranges must not overlap (You will not be able to reserve overlapping seats, because you will just be redirected to the other class)
 *Seat index "from" must be smaller than "to". Ignoring this will cause seats to become invalid and menu will not show any seats.
-*Sear indexes mustn't be negative
 
 NON-STRICT, but you should follow anyway:
+*Seat indexes shouldn't be negative
 *Seat range should not include 0, as picking this seat will exit the program
 *There shouldn't be a gap between first class and second class as you will be able to reserve "gap" seats, however they will not be dissplayed in the reservation menu. (there is an index in the array for it, but the seat "isn't there")
 */
@@ -205,7 +204,7 @@ int main()
     cout << "\t\t\tAirline flight reservation system" << endl;
     cout << "\t\t\tPick a Class:" << endl;
 
-    // Only allows clint to pick class 1 or 2
+    // Only allows client to pick class 1 or 2
     // --------------------------- WHILE LOOP START ---------------------------
     while (true)
     {
