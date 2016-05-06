@@ -277,6 +277,7 @@ void seatReservationMenu(int flightClass)
     else if (flightClass==2) // Second
     {
         cout << "You picked the " << nameOfClass2 << endl << endl;
+        cout << endl << "Pick a seat or enter 0 to exit:" << endl;
         printStatusOfSeats(flightClass);
         cin >> seatPick;
         while (true)
@@ -327,7 +328,8 @@ void seatReservationMenu(int flightClass)
             {
                 seatStatus[seatPick-1]=1;
                 cout << "Seat reserved" << endl;
-                cout << endl <<  "If you do not want to reserve anymore seats, input 0. Otherwise, enter the number of the seat you would like to reserve" << endl;
+                cout << endl << "If you do not want to reserve anymore seats, input 0."
+                     << endl << "Otherwise, enter the number of the seat you would like to reserve" << endl;
                 printStatusOfSeats(flightClass);
                 cin >> seatPick;
             }
